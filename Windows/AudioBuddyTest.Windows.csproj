@@ -11,6 +11,8 @@
     <AssemblyName>AudioBuddyTest.Windows</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,24 +33,137 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Source\DummyScreenManager.cs">
+      <Link>DummyScreenManager.cs</Link>
+    </Compile>
     <Compile Include="..\Source\Game1.cs">
       <Link>Game1.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\MainMenuScreen.cs">
+      <Link>MainMenuScreen.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\ArialBlack24.xnb">
+      <Link>Content\Fonts\ArialBlack24.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\ArialBlack48.xnb">
+      <Link>Content\Fonts\ArialBlack48.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\ArialBlack72.xnb">
+      <Link>Content\Fonts\ArialBlack72.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\credits.mp3">
+      <Link>Content\credits.mp3</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\intro_loop.mp3">
+      <Link>Content\intro_loop.mp3</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\pop.wav">
+      <Link>Content\pop.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\quack.wav">
+      <Link>Content\quack.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\squeak.wav">
+      <Link>Content\squeak.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\AudioBuddyTest.xgs">
+      <Link>Content\AudioBuddyTest.xgs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\Sound Bank.xsb">
+      <Link>Content\Sound Bank.xsb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\Wave Bank.xwb">
+      <Link>Content\Wave Bank.xwb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\externals\AudioBuddy\Windows\AudioBuddy.Windows.csproj">
+      <Project>{84c83c7c-0c90-4bf0-9d0a-b0cbb9802adf}</Project>
+      <Name>AudioBuddy.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\FontBuddy\Windows\FontBuddy.Windows.csproj">
+      <Project>{65b5bb5d-0c69-4ddb-8de6-f6b91c41279d}</Project>
+      <Name>FontBuddy.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\GameTimer\Windows\GameTimer.Windows.csproj">
+      <Project>{6b6d4188-5c03-4e16-923b-96fdbc85b91a}</Project>
+      <Name>GameTimer.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\HadoukInput\Windows\HadoukInput.Windows.csproj">
+      <Project>{85d723f7-83ef-4c75-82ba-9385d0ac8448}</Project>
+      <Name>HadoukInput.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\MenuBuddy\Windows\MenuBuddy.Windows.csproj">
+      <Project>{e83f9eaa-eb6b-4801-8bef-c602d34ebfd3}</Project>
+      <Name>MenuBuddy.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\ResolutionBuddy\Windows\ResolutionBuddy.Windows.csproj">
+      <Project>{28342df0-0089-4a2a-b3d4-6dcd65d6d8e4}</Project>
+      <Name>ResolutionBuddy.Windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\externals\MenuBuddy\Source\Content\gradient.png">
+      <Link>Content\gradient.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\externals\MenuBuddy\Source\Content\hourglass.png">
+      <Link>Content\hourglass.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1Content\menu move.wav">
+      <Link>Content\menu move.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1Content\menu select.wav">
+      <Link>Content\menu select.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MonoGame.Binaries.3.2.0\build\net40\MonoGame.Binaries.targets" Condition="Exists('packages\MonoGame.Binaries.3.2.0\build\net40\MonoGame.Binaries.targets')" />
@@ -57,7 +172,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\MonoGame.Binaries.3.2.0\build\net40\MonoGame.Binaries.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MonoGame.Binaries.3.2.0\build\net40\MonoGame.Binaries.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

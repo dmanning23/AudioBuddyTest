@@ -1,14 +1,11 @@
 using Microsoft.Xna.Framework;
-using ToastBuddyLib;
+using AudioBuddy;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using ResolutionBuddy;
 using System.Collections.Generic;
-#if OUYA
-using Ouya.Console.Api;
-#endif
 
-namespace RoboJets
+namespace AudioBuddyTest
 {
 	/// <summary>
 	/// This is the main type for your game
@@ -17,15 +14,10 @@ namespace RoboJets
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
-		ToastBuddy m_Messages;
 
 		private readonly DummyScreenManager _ScreenManager;
 
-#if OUYA
-		public Game1(IList<Purchasable> purchasables, OuyaFacade purchaseFacade)
-#else
 		public Game1()
-#endif
 		{
 			graphics = new GraphicsDeviceManager(this);
 			graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft;
@@ -33,17 +25,10 @@ namespace RoboJets
 			Content.RootDirectory = "Content";
 
 			// Create the screen manager component.
-#if OUYA
-			_ScreenManager = new DummyScreenManager(this, purchasables, purchaseFacade);
-#else
 			_ScreenManager = new DummyScreenManager(this);
-#endif
 
-			_ScreenManager.ClearColor = new Color(0, 0, 20);
+			_ScreenManager.ClearColor = new Color(20, 128, 20);
 			Components.Add(_ScreenManager);
-
-			m_Messages = new ToastBuddy(this, @"Fonts\ArialBlack24", UpperRight, Resolution.TransformationMatrix);
-			Components.Add(m_Messages);
 
 			// Activate the first screens.
 			_ScreenManager.AddScreen(_ScreenManager.GetMainMenuScreenStack(), null);
@@ -71,6 +56,12 @@ namespace RoboJets
 
 			//set the desired resolution
 			Resolution.SetScreenResolution(1280, 720, false);
+
+			//setup the audio stuff
+			AudioManager.Initialize(this, 
+				@"Content\AudioBuddyTest.xgs",
+				@"Content\Wave Bank.xwb",
+				@"Content\Sound Bank.xsb");
 
 			base.Initialize();
 		}
