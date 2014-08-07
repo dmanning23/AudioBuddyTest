@@ -92,18 +92,6 @@
       <Link>Content\intro_loop.mp3</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\Source\Content\pop.wav">
-      <Link>Content\pop.wav</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Source\Content\quack.wav">
-      <Link>Content\quack.wav</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Source\Content\squeak.wav">
-      <Link>Content\squeak.wav</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="SDL.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
