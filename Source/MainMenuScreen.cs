@@ -1,5 +1,7 @@
 using MenuBuddy;
 using System.Collections.Generic;
+using FilenameBuddy;
+using System.Collections.Generic;
 using AudioBuddy;
 using Microsoft.Xna.Framework;
 
@@ -10,6 +12,14 @@ namespace AudioBuddyTest
 	/// </summary>
 	internal class MainMenuScreen : MenuScreen, IMainMenu
 	{
+		#region Properties
+
+		List<Filename> Music;
+
+		List<Filename> SoundFx;
+
+		#endregion //Properties
+
 		#region Initialization
 
 		/// <summary>
@@ -18,16 +28,21 @@ namespace AudioBuddyTest
 		public MainMenuScreen() : base("Main Menu")
 		{
 			// Create our menu entries.
-			var soundTest = new MenuEntry("Sound Test");
-			var exitMenuEntry = new MenuEntry("Exit");
+			var menu = new MenuEntry("Sound Test");
+			menu.Selected += SoundTestSelected;
+			MenuEntries.Add(menu);
 
-			// Hook up menu event handlers.
-			soundTest.Selected += SoundTestSelected;
-			exitMenuEntry.Selected += OnExit;
+			menu = new MenuEntry("Music Test");
+			menu.Selected += MusicTestSelected;
+			MenuEntries.Add(menu);
 
-			// Add entries to the menu.
-			MenuEntries.Add(soundTest);
-			MenuEntries.Add(exitMenuEntry);
+			menu = new MenuEntry("Sound Fx Test");
+			menu.Selected += SoundFxTestSelected;
+			MenuEntries.Add(menu);
+
+			menu = new MenuEntry("Exit");
+			menu.Selected += OnExit;
+			MenuEntries.Add(menu);
 		}
 
 		#endregion //Initialization
@@ -36,6 +51,19 @@ namespace AudioBuddyTest
 
 		public override void LoadContent()
 		{
+			Music = new System.Collections.Generic.List<Filename> ()
+			{
+				new Filename(@"Music\BattleTheme.wav"),
+				new Filename(@"Music\DungeonTheme.wav"),
+				new Filename(@"Music\ForestTheme.wav")
+			};
+
+			SoundFx = new System.Collections.Generic.List<Filename>()
+			{
+				new Filename(@"Sounds\pop.wav"),
+				new Filename(@"Sounds\quack.wav"),
+				new Filename(@"Sounds\squeak.wav")
+			};
 		}
 
 		#endregion //Methods
@@ -48,7 +76,22 @@ namespace AudioBuddyTest
 		private void SoundTestSelected(object sender, PlayerIndexEventArgs e)
 		{
 			var screen = new SoundTestScreen();
-			screen.SoundFxCues.AddRange(new List<string>() { "pop", "quack", "squeak" });
+			screen.AddMusic(Music);
+			screen.AddSoundFx(SoundFx);
+			ScreenManager.AddScreen(screen, null);
+		}
+
+		private void MusicTestSelected(object sender, PlayerIndexEventArgs e)
+		{
+			var screen = new MusicTestScreen();
+			screen.AddMusic(Music);
+			ScreenManager.AddScreen(screen, null);
+		}
+
+		private void SoundFxTestSelected(object sender, PlayerIndexEventArgs e)
+		{
+			var screen = new SoundFxTestScreen();
+			screen.AddSoundFx(SoundFx);
 			ScreenManager.AddScreen(screen, null);
 		}
 

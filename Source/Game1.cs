@@ -55,13 +55,10 @@ namespace AudioBuddyTest
 			Resolution.SetDesiredResolution(1280, 720);
 
 			//set the desired resolution
-			Resolution.SetScreenResolution(1280, 720, true);
+			Resolution.SetScreenResolution(1280, 720, false);
 
 			//setup the audio stuff
-			AudioManager.Initialize(this, 
-				@"AudioBuddyTest.xgs",
-				@"Wave Bank.xwb",
-				@"Sound Bank.xsb");
+			AudioManager.Initialize(this);
 
 			base.Initialize();
 		}

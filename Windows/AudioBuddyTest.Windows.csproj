@@ -84,27 +84,31 @@
       <Link>Content\Fonts\ArialBlack72.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\Source\Content\credits.mp3">
-      <Link>Content\credits.mp3</Link>
+    <Content Include="..\Source\Content\Music\BattleTheme.wav">
+      <Link>Content\Music\BattleTheme.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\Source\Content\intro_loop.mp3">
-      <Link>Content\intro_loop.mp3</Link>
+    <Content Include="..\Source\Content\Music\DungeonTheme.wav">
+      <Link>Content\Music\DungeonTheme.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\Music\ForestTheme.wav">
+      <Link>Content\Music\ForestTheme.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\Sounds\pop.wav">
+      <Link>Content\Sounds\pop.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\Sounds\quack.wav">
+      <Link>Content\Sounds\quack.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\Sounds\squeak.wav">
+      <Link>Content\Sounds\squeak.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SDL.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\AudioBuddyTest.xgs">
-      <Link>Content\AudioBuddyTest.xgs</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\Sound Bank.xsb">
-      <Link>Content\Sound Bank.xsb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\Wave Bank.xwb">
-      <Link>Content\Wave Bank.xwb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="App.config" />
@@ -113,6 +117,10 @@
     <ProjectReference Include="..\externals\AudioBuddy\Windows\AudioBuddy.Windows.csproj">
       <Project>{84c83c7c-0c90-4bf0-9d0a-b0cbb9802adf}</Project>
       <Name>AudioBuddy.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\Filename\Windows\Filename.Windows.csproj">
+      <Project>{2a84dfe8-75e0-4774-baaf-00629ed44405}</Project>
+      <Name>Filename.Windows</Name>
     </ProjectReference>
     <ProjectReference Include="..\externals\FontBuddy\Windows\FontBuddy.Windows.csproj">
       <Project>{65b5bb5d-0c69-4ddb-8de6-f6b91c41279d}</Project>
