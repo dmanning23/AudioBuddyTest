@@ -47,8 +47,6 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Source\DummyScreenManager.cs">
@@ -99,15 +97,15 @@
     <AndroidAsset Include="..\externals\MenuBuddy\Source\Content\MenuSelect.wav">
       <Link>Assets\Content\MenuSelect.wav</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Source\Content\Music\BattleTheme.wav">
+    <Content Include="..\Source\Content\Music\BattleTheme.wav">
       <Link>Assets\Content\Music\BattleTheme.wav</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\Source\Content\Music\DungeonTheme.wav">
+    </Content>
+    <Content Include="..\Source\Content\Music\DungeonTheme.wav">
       <Link>Assets\Content\Music\DungeonTheme.wav</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\Source\Content\Music\ForestTheme.wav">
+    </Content>
+    <Content Include="..\Source\Content\Music\ForestTheme.wav">
       <Link>Assets\Content\Music\ForestTheme.wav</Link>
-    </AndroidAsset>
+    </Content>
     <AndroidAsset Include="..\Source\Content\Sounds\pop.wav">
       <Link>Assets\Content\Sounds\pop.wav</Link>
     </AndroidAsset>

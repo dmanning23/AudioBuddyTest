@@ -56,7 +56,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Source\DummyScreenManager.cs">
@@ -72,6 +71,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\externals\MenuBuddy\Source\Content\MenuMove.wav">
+      <Link>Content\MenuMove.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\externals\MenuBuddy\Source\Content\MenuSelect.wav">
+      <Link>Content\MenuSelect.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\ArialBlack24.xnb">
       <Link>Content\Fonts\ArialBlack24.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -122,18 +129,6 @@
       <Project>{2a84dfe8-75e0-4774-baaf-00629ed44405}</Project>
       <Name>Filename.Windows</Name>
     </ProjectReference>
-    <ProjectReference Include="..\externals\FontBuddy\Windows\FontBuddy.Windows.csproj">
-      <Project>{65b5bb5d-0c69-4ddb-8de6-f6b91c41279d}</Project>
-      <Name>FontBuddy.Windows</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\externals\GameTimer\Windows\GameTimer.Windows.csproj">
-      <Project>{6b6d4188-5c03-4e16-923b-96fdbc85b91a}</Project>
-      <Name>GameTimer.Windows</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\externals\HadoukInput\Windows\HadoukInput.Windows.csproj">
-      <Project>{85d723f7-83ef-4c75-82ba-9385d0ac8448}</Project>
-      <Name>HadoukInput.Windows</Name>
-    </ProjectReference>
     <ProjectReference Include="..\externals\MenuBuddy\Windows\MenuBuddy.Windows.csproj">
       <Project>{e83f9eaa-eb6b-4801-8bef-c602d34ebfd3}</Project>
       <Name>MenuBuddy.Windows</Name>
@@ -141,6 +136,10 @@
     <ProjectReference Include="..\externals\ResolutionBuddy\Windows\ResolutionBuddy.Windows.csproj">
       <Project>{28342df0-0089-4a2a-b3d4-6dcd65d6d8e4}</Project>
       <Name>ResolutionBuddy.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\TouchScreenBuddy\Windows\TouchScreenBuddy.Windows.csproj">
+      <Project>{764d3dc6-927a-45ee-901d-ea07966dde72}</Project>
+      <Name>TouchScreenBuddy.Windows</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -150,14 +149,6 @@
     </Content>
     <Content Include="..\externals\MenuBuddy\Source\Content\hourglass.png">
       <Link>Content\hourglass.png</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1Content\menu move.wav">
-      <Link>Content\menu move.wav</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\externals\XNA\WindowsGame1\WindowsGame1Content\menu select.wav">
-      <Link>Content\menu select.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
