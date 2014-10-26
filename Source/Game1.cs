@@ -1,9 +1,9 @@
-using Microsoft.Xna.Framework;
 using AudioBuddy;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using ResolutionBuddy;
-using System.Collections.Generic;
+using TouchScreenBuddy;
 
 namespace AudioBuddyTest
 {
@@ -22,6 +22,11 @@ namespace AudioBuddyTest
 			graphics = new GraphicsDeviceManager(this);
 			graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft;
 			Resolution.Init(ref graphics);
+
+            //create the touch manager component
+            var touches = new TouchManager(this, Resolution.ScreenToGameCoord);
+            Components.Add(touches);
+
 			Content.RootDirectory = "Content";
 
 			// Create the screen manager component.

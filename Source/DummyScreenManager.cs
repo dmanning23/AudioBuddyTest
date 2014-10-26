@@ -1,9 +1,5 @@
 using MenuBuddy;
-using System.Diagnostics;
-using System;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 
 namespace AudioBuddyTest
 {
@@ -24,8 +20,8 @@ namespace AudioBuddyTest
 				"Fonts\\ArialBlack72",
 				"Fonts\\ArialBlack48",
 				"Fonts\\ArialBlack24",
-				"menu move",
-				"menu select")
+				"MenuMove",
+				"MenuSelect")
 		{
 		}
 
@@ -36,11 +32,6 @@ namespace AudioBuddyTest
 		public override GameScreen[] GetMainMenuScreenStack()
 		{
 			return new GameScreen[] { new MainMenuScreen() };
-		}
-
-		public override void Initialize()
-		{
-			base.Initialize();
 		}
 
 		#endregion //Methods

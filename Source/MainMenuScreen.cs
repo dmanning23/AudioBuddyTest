@@ -1,9 +1,8 @@
-using MenuBuddy;
-using System.Collections.Generic;
-using FilenameBuddy;
-using System.Collections.Generic;
 using AudioBuddy;
+using FilenameBuddy;
+using MenuBuddy;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 
 namespace AudioBuddyTest
 {
