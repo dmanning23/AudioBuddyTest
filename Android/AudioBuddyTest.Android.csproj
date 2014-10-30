@@ -97,15 +97,6 @@
     <AndroidAsset Include="..\externals\MenuBuddy\Source\Content\MenuSelect.wav">
       <Link>Assets\Content\MenuSelect.wav</Link>
     </AndroidAsset>
-    <Content Include="..\Source\Content\Music\BattleTheme.wav">
-      <Link>Assets\Content\Music\BattleTheme.wav</Link>
-    </Content>
-    <Content Include="..\Source\Content\Music\DungeonTheme.wav">
-      <Link>Assets\Content\Music\DungeonTheme.wav</Link>
-    </Content>
-    <Content Include="..\Source\Content\Music\ForestTheme.wav">
-      <Link>Assets\Content\Music\ForestTheme.wav</Link>
-    </Content>
     <AndroidAsset Include="..\Source\Content\Sounds\pop.wav">
       <Link>Assets\Content\Sounds\pop.wav</Link>
     </AndroidAsset>
@@ -159,6 +150,9 @@
       <Project>{1939a621-a300-43a8-9f9b-e3ecc5812b13}</Project>
       <Name>TouchScreenBuddy.Android</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Content\Music\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
