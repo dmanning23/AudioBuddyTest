@@ -52,9 +52,17 @@ namespace AudioBuddyTest
 		{
 			Music = new System.Collections.Generic.List<Filename> ()
 			{
+#if ANDROID
+				new Filename(@"Music\bathboard.mp3"),
+				new Filename(@"Music\credit.mp3"),
+				new Filename(@"Music\intro_loop.mp3"),
+				new Filename(@"Music\KfCFortress.mp3"),
+				new Filename(@"Music\pirate.mp3")
+#else
 				new Filename(@"Music\BattleTheme.wav"),
 				new Filename(@"Music\DungeonTheme.wav"),
 				new Filename(@"Music\ForestTheme.wav")
+#endif
 			};
 
 			SoundFx = new System.Collections.Generic.List<Filename>()

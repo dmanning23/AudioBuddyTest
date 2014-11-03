@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;ANDROID,OUYA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
@@ -110,19 +110,36 @@
       <Project>{493A4B6F-98CE-4000-8A0C-4A4726299061}</Project>
       <Name>Ouya.Console.Api</Name>
     </ProjectReference>
+    <ProjectReference Include="..\externals\TouchScreenBuddy\Ouya\TouchScreenBuddy.Ouya.csproj">
+      <Project>{12ae06c4-f065-4399-9a17-d13ab6961f55}</Project>
+      <Name>TouchScreenBuddy.Ouya</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\Content\" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\AudioBuddyTest.xgs">
-      <Link>Assets\Content\AudioBuddyTest.xgs</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\Sound Bank.xsb">
-      <Link>Assets\Content\Sound Bank.xsb</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\Windows.Xna\AudioBuddyTest.Windows.Xna\AudioBuddyTest.Windows.Xna\bin\x86\Debug\Content\Wave Bank.xwb">
-      <Link>Assets\Content\Wave Bank.xwb</Link>
-    </AndroidAsset>
+    <Content Include="..\Source\Content\Music\bathboard.mp3">
+      <Link>Assets\Content\Music\bathboard.mp3</Link>
+    </Content>
+    <Content Include="..\Source\Content\Music\credit.mp3">
+      <Link>Assets\Content\Music\credit.mp3</Link>
+    </Content>
+    <Content Include="..\Source\Content\Music\intro_loop.mp3">
+      <Link>Assets\Content\Music\intro_loop.mp3</Link>
+    </Content>
+    <Content Include="..\Source\Content\Music\KfCFortress.mp3">
+      <Link>Assets\Content\Music\KfCFortress.mp3</Link>
+    </Content>
+    <Content Include="..\Source\Content\Music\pirate.mp3">
+      <Link>Assets\Content\Music\pirate.mp3</Link>
+    </Content>
+    <Content Include="..\Source\Content\Sounds\pop.wav">
+      <Link>Assets\Content\Sounds\pop.wav</Link>
+    </Content>
+    <Content Include="..\Source\Content\Sounds\quack.wav">
+      <Link>Assets\Content\Sounds\quack.wav</Link>
+    </Content>
+    <Content Include="..\Source\Content\Sounds\squeak.wav">
+      <Link>Assets\Content\Sounds\squeak.wav</Link>
+    </Content>
   </ItemGroup>
 </Project>

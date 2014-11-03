@@ -151,8 +151,23 @@
       <Name>TouchScreenBuddy.Android</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\Content\Music\" />
+    <AndroidAsset Include="..\Source\Content\Music\bathboard.mp3">
+      <Link>Assets\Content\Music\bathboard.mp3</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Source\Content\Music\credit.mp3">
+      <Link>Assets\Content\Music\credit.mp3</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Source\Content\Music\intro_loop.mp3">
+      <Link>Assets\Content\Music\intro_loop.mp3</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Source\Content\Music\KfCFortress.mp3">
+      <Link>Assets\Content\Music\KfCFortress.mp3</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Source\Content\Music\pirate.mp3">
+      <Link>Assets\Content\Music\pirate.mp3</Link>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

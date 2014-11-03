@@ -23,9 +23,11 @@ namespace AudioBuddyTest
 			graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft;
 			Resolution.Init(ref graphics);
 
+#if ANDROID && !OUYA
             //create the touch manager component
             var touches = new TouchManager(this, Resolution.ScreenToGameCoord);
             Components.Add(touches);
+#endif
 
 			Content.RootDirectory = "Content";
 
