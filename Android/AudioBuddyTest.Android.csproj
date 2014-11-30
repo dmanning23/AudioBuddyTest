@@ -151,21 +151,20 @@
       <Name>TouchScreenBuddy.Android</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <AndroidAsset Include="..\Source\Content\Music\bathboard.mp3">
+    <AndroidAsset Include="..\..\pajamorama\Source\Content\Sounds\Music\bathboard.mp3">
       <Link>Assets\Content\Music\bathboard.mp3</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Source\Content\Music\credit.mp3">
+    <AndroidAsset Include="..\..\pajamorama\Source\Content\Sounds\Music\credit.mp3">
       <Link>Assets\Content\Music\credit.mp3</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Source\Content\Music\intro_loop.mp3">
+    <AndroidAsset Include="..\..\pajamorama\Source\Content\Sounds\Music\intro_loop.mp3">
       <Link>Assets\Content\Music\intro_loop.mp3</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Source\Content\Music\KfCFortress.mp3">
+    <AndroidAsset Include="..\..\pajamorama\Source\Content\Sounds\Music\KfCFortress.mp3">
       <Link>Assets\Content\Music\KfCFortress.mp3</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\Source\Content\Music\pirate.mp3">
+    <AndroidAsset Include="..\..\pajamorama\Source\Content\Sounds\Music\pirate.mp3">
       <Link>Assets\Content\Music\pirate.mp3</Link>
     </AndroidAsset>
   </ItemGroup>
