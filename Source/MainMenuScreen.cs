@@ -24,32 +24,14 @@ namespace AudioBuddyTest
 		/// <summary>
 		/// Constructor fills in the menu contents.
 		/// </summary>
-		public MainMenuScreen() : base("Main Menu")
+		public MainMenuScreen()
+			: base("Main Menu")
 		{
-			// Create our menu entries.
-			var menu = new MenuEntry("Sound Test");
-			menu.Selected += SoundTestSelected;
-			MenuEntries.Add(menu);
-
-			menu = new MenuEntry("Music Test");
-			menu.Selected += MusicTestSelected;
-			MenuEntries.Add(menu);
-
-			menu = new MenuEntry("Sound Fx Test");
-			menu.Selected += SoundFxTestSelected;
-			MenuEntries.Add(menu);
-
-			menu = new MenuEntry("Exit");
-			menu.Selected += OnExit;
-			MenuEntries.Add(menu);
 		}
-
-		#endregion //Initialization
-
-		#region Methods
 
 		public override void LoadContent()
 		{
+			//initialize all the sound data
 			Music = new System.Collections.Generic.List<Filename> ()
 			{
 				new Filename(@"Music\bathboard.mp3"),
@@ -65,9 +47,26 @@ namespace AudioBuddyTest
 				new Filename(@"Sounds\quack.wav"),
 				new Filename(@"Sounds\squeak.wav")
 			};
+
+		// Create our menu entries.
+			var menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Sound Test");
+			menu.Selected += SoundTestSelected;
+			AddMenuEntry(menu);
+
+			menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Music Test");
+			menu.Selected += MusicTestSelected;
+			AddMenuEntry(menu);
+
+			menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Sound Fx Test");
+			menu.Selected += SoundFxTestSelected;
+			AddMenuEntry(menu);
+
+			menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Exit");
+			menu.Selected += OnExit;
+			AddMenuEntry(menu);
 		}
 
-		#endregion //Methods
+		#endregion //Initialization
 
 		#region Handle Input
 
@@ -119,7 +118,7 @@ namespace AudioBuddyTest
 		/// <summary>
 		/// Ignore the cancel message from the main menu
 		/// </summary>
-		protected override void OnCancel(PlayerIndex playerIndex)
+		public override void OnCancel(PlayerIndex? playerIndex)
 		{
 			//do nothing here!
 		}
