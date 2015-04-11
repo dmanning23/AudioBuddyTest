@@ -1,3 +1,4 @@
+using AudioBuddy;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
@@ -11,6 +12,13 @@ namespace AudioBuddyTest
 	{
 		public Game1()
 		{
+		}
+
+		protected override void Initialize()
+		{
+			AudioManager.Initialize(this);
+
+			base.Initialize();
 		}
 
 		public override IScreen[] GetMainMenuScreenStack()

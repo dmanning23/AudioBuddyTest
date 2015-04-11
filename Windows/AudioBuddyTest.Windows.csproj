@@ -88,6 +88,14 @@
       <Link>Content\Music\pirate.mp3</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\externals\MenuBuddy\Source\Content\AlphaGradient.png">
+      <Link>Content\AlphaGradient.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\externals\MenuBuddy\Source\Content\Cancel.png">
+      <Link>Content\Cancel.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\externals\MenuBuddy\Source\Content\MenuMove.wav">
       <Link>Content\MenuMove.wav</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

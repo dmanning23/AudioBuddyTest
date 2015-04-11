@@ -31,6 +31,8 @@ namespace AudioBuddyTest
 
 		public override void LoadContent()
 		{
+			base.LoadContent();
+
 			//initialize all the sound data
 			Music = new System.Collections.Generic.List<Filename> ()
 			{
