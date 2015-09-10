@@ -51,19 +51,19 @@ namespace AudioBuddyTest
 			};
 
 		// Create our menu entries.
-			var menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Sound Test");
+			var menu = new MenuEntry("Sound Test");
 			menu.Selected += SoundTestSelected;
 			AddMenuEntry(menu);
 
-			menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Music Test");
+			menu = new MenuEntry("Music Test");
 			menu.Selected += MusicTestSelected;
 			AddMenuEntry(menu);
 
-			menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Sound Fx Test");
+			menu = new MenuEntry("Sound Fx Test");
 			menu.Selected += SoundFxTestSelected;
 			AddMenuEntry(menu);
 
-			menu = new MenuEntry(ScreenManager.Styles.MenuEntryStyle, "Exit");
+			menu = new MenuEntry("Exit");
 			menu.Selected += OnExit;
 			AddMenuEntry(menu);
 		}

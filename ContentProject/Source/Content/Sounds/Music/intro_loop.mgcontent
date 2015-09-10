@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>Y:/Documents/Projects/AudioBuddyTest/ContentProject/../Source/Content/Sounds/Music/intro_loop.mp3</SourceFile>
+  <SourceTime>2015-09-05T21:43:28-05:00</SourceTime>
+  <DestFile>Y:/Documents/Projects/AudioBuddyTest/ContentProject/bin/../Source/Content/Sounds/Music/intro_loop.xnb</DestFile>
+  <DestTime>2015-09-09T21:10:10-05:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2015-04-29T12:14:44-05:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2015-04-29T12:14:44-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>Y:/Documents/Projects/AudioBuddyTest/ContentProject/bin/../Source/Content/Sounds/Music/intro_loop.m4a</string>
+  </BuildOutput>
+</PipelineBuildEvent>
