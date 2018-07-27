@@ -27,9 +27,14 @@ namespace AudioBuddyTest
 
 		protected override void Initialize()
 		{
+			base.Initialize();
+		}
+
+		protected override void LoadContent()
+		{
 			AudioManager.Initialize(this);
 
-			base.Initialize();
+			base.LoadContent();
 		}
 
 		public override IScreen[] GetMainMenuScreenStack()

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioBuddyTest.Android", "AudioBuddyTest.Android\AudioBuddyTest.Android.csproj", "{B65CEE78-1019-4044-B4C8-243C99DCD5B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioBuddyTest.DesktopGL", "AudioBuddyTest.DesktopGL\AudioBuddyTest.DesktopGL.csproj", "{DAFD898B-4756-42DD-A5A4-745BAFD60EBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioBuddyTest.WindowsDX", "AudioBuddyTest.DesktopGL\AudioBuddyTest.WindowsDX.csproj", "{DAFD898B-4756-42DD-A5A4-745BAFD60EBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioBuddyTest.iOS", "AudioBuddyTest.iOS\AudioBuddyTest.iOS.csproj", "{0776B773-8096-486F-A98B-03EC958EEC0C}"
 EndProject
@@ -124,8 +124,8 @@ Global
 		{0776B773-8096-486F-A98B-03EC958EEC0C}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
 		{0776B773-8096-486F-A98B-03EC958EEC0C}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
 		{0776B773-8096-486F-A98B-03EC958EEC0C}.AppStore|x86.ActiveCfg = AppStore|iPhone
-		{0776B773-8096-486F-A98B-03EC958EEC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0776B773-8096-486F-A98B-03EC958EEC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0776B773-8096-486F-A98B-03EC958EEC0C}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{0776B773-8096-486F-A98B-03EC958EEC0C}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{0776B773-8096-486F-A98B-03EC958EEC0C}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{0776B773-8096-486F-A98B-03EC958EEC0C}.Debug|iPhone.Build.0 = Debug|iPhone
 		{0776B773-8096-486F-A98B-03EC958EEC0C}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -140,5 +140,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30313CFB-FD56-4422-847F-7C21F09E3BD7}
 	EndGlobalSection
 EndGlobal

@@ -35,7 +35,7 @@ namespace AudioBuddyTest
 			base.LoadContent();
 
 			//initialize all the sound data
-			Music = new System.Collections.Generic.List<Filename> ()
+			Music = new System.Collections.Generic.List<Filename>()
 			{
 				new Filename(@"Music\bathboard.mp3"),
 				new Filename(@"Music\credit.mp3"),
@@ -46,25 +46,25 @@ namespace AudioBuddyTest
 
 			SoundFx = new System.Collections.Generic.List<Filename>()
 			{
-				new Filename(@"SoundFX\pop.wav"),
-				new Filename(@"SoundFX\quack.wav"),
-				new Filename(@"SoundFX\squeak.wav")
+				new Filename(@"Content\SoundFX\pop.wav"),
+				new Filename(@"Content\SoundFX\quack.wav"),
+				new Filename(@"Content\SoundFX\squeak.wav")
 			};
 
-		// Create our menu entries.
-			var menu = new MenuEntry("Sound Test");
+			// Create our menu entries.
+			var menu = new MenuEntry("Sound Test", Content);
 			menu.OnClick += SoundTestSelected;
 			AddMenuEntry(menu);
 
-			menu = new MenuEntry("Music Test");
+			menu = new MenuEntry("Music Test", Content);
 			menu.OnClick += MusicTestSelected;
 			AddMenuEntry(menu);
 
-			menu = new MenuEntry("Sound Fx Test");
+			menu = new MenuEntry("Sound Fx Test", Content);
 			menu.OnClick += SoundFxTestSelected;
 			AddMenuEntry(menu);
 
-			menu = new MenuEntry("Exit");
+			menu = new MenuEntry("Exit", Content);
 			menu.OnClick += OnExit;
 			AddMenuEntry(menu);
 		}
@@ -98,22 +98,14 @@ namespace AudioBuddyTest
 			ScreenManager.AddScreen(screen, null);
 		}
 
+		public override void Cancelled(object obj, ClickEventArgs e)
+		{
+		}
+
 		/// <summary>
 		/// When the user cancels the main menu, ask if they want to exit the sample.
 		/// </summary>
 		protected void OnExit(object sender, ClickEventArgs e)
-		{
-			const string message = "Are you sure you want to exit?";
-			var confirmExitMessageBox = new MessageBoxScreen(message);
-			confirmExitMessageBox.OnClick += ConfirmExitMessageBoxAccepted;
-			ScreenManager.AddScreen(confirmExitMessageBox, e.PlayerIndex);
-		}
-
-		/// <summary>
-		/// Event handler for when the user selects ok on the "are you sure
-		/// you want to exit" message box.
-		/// </summary>
-		private void ConfirmExitMessageBoxAccepted(object sender, ClickEventArgs e)
 		{
 #if !__IOS__
 			ScreenManager.Game.Exit();
