@@ -9,7 +9,7 @@ namespace AudioBuddyTest
 	/// This is the main type for your game
 	/// </summary>
 #if !__IOS__ && !ANDROID
-	public class Game1 : ControllerGame
+	public class Game1 : MouseGame
 #else
 	public class Game1 : TouchGame
 #endif
@@ -17,6 +17,10 @@ namespace AudioBuddyTest
 		public Game1()
 		{
 			Graphics.SupportedOrientations = DisplayOrientation.Portrait | DisplayOrientation.PortraitDown;
+
+#if DESKTOP
+			IsMouseVisible = true;
+#endif
 
 			VirtualResolution = new Point(720, 1280);
 			ScreenResolution = new Point(720, 1280);
