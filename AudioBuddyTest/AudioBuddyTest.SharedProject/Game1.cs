@@ -18,9 +18,7 @@ namespace AudioBuddyTest
 		{
 			Graphics.SupportedOrientations = DisplayOrientation.Portrait | DisplayOrientation.PortraitDown;
 
-#if DESKTOP
 			IsMouseVisible = true;
-#endif
 
 			VirtualResolution = new Point(720, 1280);
 			ScreenResolution = new Point(720, 1280);

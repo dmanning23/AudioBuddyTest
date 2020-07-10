@@ -4,13 +4,14 @@ using InputHelper;
 using MenuBuddy;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AudioBuddyTest
 {
 	/// <summary>
 	/// The main menu screen is the first thing displayed when the game starts up.
 	/// </summary>
-	internal class MainMenuScreen : MenuScreen, IMainMenu
+	internal class MainMenuScreen : MenuStackScreen, IMainMenu
 	{
 		#region Properties
 
@@ -30,9 +31,9 @@ namespace AudioBuddyTest
 		{
 		}
 
-		public override void LoadContent()
+		public override async Task LoadContent()
 		{
-			base.LoadContent();
+			await base.LoadContent();
 
 			//initialize all the sound data
 			Music = new System.Collections.Generic.List<Filename>()
@@ -46,9 +47,9 @@ namespace AudioBuddyTest
 
 			SoundFx = new System.Collections.Generic.List<Filename>()
 			{
-				new Filename(@"Content\SoundFX\pop.wav"),
-				new Filename(@"Content\SoundFX\quack.wav"),
-				new Filename(@"Content\SoundFX\squeak.wav")
+				new Filename(@"SoundFX\pop.wav"),
+				new Filename(@"SoundFX\quack.wav"),
+				new Filename(@"SoundFX\squeak.wav")
 			};
 
 			// Create our menu entries.
@@ -76,26 +77,26 @@ namespace AudioBuddyTest
 		/// <summary>
 		/// Event handler for when the High Scores menu entry is selected.
 		/// </summary>
-		private void SoundTestSelected(object sender, ClickEventArgs e)
+		private async void SoundTestSelected(object sender, ClickEventArgs e)
 		{
 			var screen = new SoundTestScreen();
 			screen.AddMusic(Music);
 			screen.AddSoundFx(SoundFx);
-			ScreenManager.AddScreen(screen, null);
+			await ScreenManager.AddScreen(screen, null);
 		}
 
-		private void MusicTestSelected(object sender, ClickEventArgs e)
+		private async void MusicTestSelected(object sender, ClickEventArgs e)
 		{
 			var screen = new MusicTestScreen();
 			screen.AddMusic(Music);
-			ScreenManager.AddScreen(screen, null);
+			await ScreenManager.AddScreen(screen, null);
 		}
 
-		private void SoundFxTestSelected(object sender, ClickEventArgs e)
+		private async void SoundFxTestSelected(object sender, ClickEventArgs e)
 		{
 			var screen = new SoundFxTestScreen();
 			screen.AddSoundFx(SoundFx);
-			ScreenManager.AddScreen(screen, null);
+			await ScreenManager.AddScreen(screen, null);
 		}
 
 		public override void Cancelled(object obj, ClickEventArgs e)
