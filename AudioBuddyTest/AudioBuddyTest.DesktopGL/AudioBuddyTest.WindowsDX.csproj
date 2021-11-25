@@ -66,7 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AudioBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AudioBuddy.2.0.16\lib\net451\AudioBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\AudioBuddy.2.0.17\lib\net451\AudioBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="Cyotek.Drawing.BitmapFont, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
       <HintPath>..\packages\Cyotek.Drawing.BitmapFont.2.0.3\lib\net452\Cyotek.Drawing.BitmapFont.dll</HintPath>

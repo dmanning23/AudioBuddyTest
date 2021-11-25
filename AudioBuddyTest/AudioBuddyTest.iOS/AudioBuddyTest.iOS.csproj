@@ -142,7 +142,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AudioBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AudioBuddy.2.0.16\lib\Xamarin.iOS10\AudioBuddy.iOS.dll</HintPath>
+      <HintPath>..\packages\AudioBuddy.2.0.17\lib\Xamarin.iOS10\AudioBuddy.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Cyotek.Drawing.BitmapFont, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
       <HintPath>..\packages\Cyotek.Drawing.BitmapFont.2.0.3\lib\netstandard2.1\Cyotek.Drawing.BitmapFont.dll</HintPath>
